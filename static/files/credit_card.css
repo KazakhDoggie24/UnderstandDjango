@@ -1,0 +1,108 @@
+.cc-content {
+    background: rgb(255, 255, 255);
+    width: 670px;
+    height: 400px;
+    margin: auto;
+    font-family: 'Overpass';
+}
+
+.card {
+    background: rgb(237, 237, 237);
+    border: 1px solid rgb(146, 146, 146);
+    border-radius: 10px;
+    width: 410px;
+    height: 210px;
+    margin: auto;
+}
+
+.cc-field {
+    border-radius: 10px;
+    border: 1px solid black;
+    background: rgb(249, 249, 249);
+    width: 300px;
+    height: 35px;
+    margin: 17px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cc-input {
+    line-height: 18px;
+    width: 220px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+}
+
+.exp-date-name {
+    margin-left: 45px;
+    font-size: 14px;
+}
+
+.exp-date-image-container {
+    display: flex;
+}
+
+.exp-date-container {
+    display: flex;
+    margin: 5px 0px 0px 45px;
+}
+
+.exp-date {
+    border-radius: 10px;
+    background: rgb(249, 249, 249);
+    border: 1px solid black;
+    width: 45px;
+    height: 25px;
+    margin: 0px 8px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.exp-date-input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+}
+
+.cvv {
+    border-radius: 10px;
+    background: rgb(249, 249, 249);
+    border: 1px solid black;
+    width: 60px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 0px 12px;
+}
+
+.cvv-input {
+    width: 40px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.image-container {
+    width: 150px;
+    height: 50px;
+    margin: 0px 0px 0px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.cc-image {
+    width: 70px;
+    height: 35px;
+    margin: 0px 0px 0px 5px;
+}
+
+.reg-cc-container {
+    margin: 45px 10px 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

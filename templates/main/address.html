@@ -1,0 +1,39 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/main_char.css' %}">
+{% endblock %}
+
+    <div class="address-border">
+        <div class="address-container">
+            <div class="address-content">
+                <h2 class="address-title">Данные об адресе</h2>
+                <div class="address-form">
+                    <form action="/register/address/" method="post">
+                        {% csrf_token %}
+                        <div class="address-field">
+                            {{ form.country }}
+                        </div>
+                        <div class="address-field">
+                            {{ form.city }}
+                        </div>
+                        <div class="address-field">
+                            {{ form.address }}
+                        </div>
+                        <div class="reg-button-container">
+                            <button class='address-submit' type='submit'>
+                                <a class="cc-register" href="{% url 'credit_card_view' %}">
+                                    <div class="cc-link">Дальше...</div>
+                                </a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

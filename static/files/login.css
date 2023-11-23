@@ -1,0 +1,24 @@
+.login-button-container {
+    margin: 70px 10px 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-signup-container {
+    width: auto;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.forgot-link, .signup-link {
+    font-size: 14px;
+    background: #cad1dc;
+    width: 120px;
+    height: 35px;
+    margin: 0px 8px 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

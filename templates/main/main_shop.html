@@ -1,10 +1,77 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Коты</title>
-</head>
-<body>
-    <h1>Hello</h1>
-</body>
-</html>
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/main_shop.css' %}">
+{% endblock %}
+
+    <div id="shop_banner">
+        <div id="shopbanner-border">
+            <div id="shop-name">FRESHLOOK</div>
+            <div id="shopbanner-quote">"Одежда — это маска, а за ней скрывается душа." - Марио Форте</div>
+        </div>
+    </div>
+    <div class="background-container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1/3</div>
+                <img src="https://x-moda.ru/uploads/redactor_image/25/fd17e027-49bc-47ef-8c4c-39da726f3a07.jpg">
+                <div class="text">ВВЕРХНЯЯ ОДЕЖДА</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">2/3</div>
+                <img src="https://odezhda.guru/wp-content/uploads/2019/08/bryuki-zastavka.jpg">
+                <div class="text">НИЖНЯЯ ОДЕЖДА</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">3/3</div>
+                <img src="https://topsov.com/wp-content/uploads/2022/07/1570570385_ava.jpg">
+                <div class="text">ОБУВЬ</div>
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            <div style="text-align: center; ">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+              showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}

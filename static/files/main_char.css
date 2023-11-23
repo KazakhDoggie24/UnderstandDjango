@@ -1,0 +1,99 @@
+.login-border, .register-border, .address-border, .cc-border {
+    background: rgba(255, 250, 145);
+    background-image: url('https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80');
+    background-size: cover;
+    width: 1250px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.login-container, .register-container, .address-container, .cc-container {
+    background: linear-gradient(90deg, #e99b3b, #fbfca5);
+    width: 900px;
+    height: 555px;
+    margin: auto;
+    display: flex;
+}
+
+.login-content, .register-content, .address-content {
+    background: white;
+    width: 335px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 35px;
+    font-family: 'Overpass';
+}
+
+.login-title, .reg-title, .address-title, .cc-title {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.login-form, .register-form, .address-form {
+    width: 285px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.login-field, .register-field, .address-field {
+    border-radius: 15px;
+    background: rgb(235, 235, 235);
+    width: 230px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+input {
+    font-family: 'Overpass';
+}
+
+.login-input, .register-input, .address-input {
+    background: none;
+    line-height: 20px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
+
+/* Декорация */
+.link-register, .address-register, .cc-register {
+    text-decoration: none;
+    color: inherit;
+}
+/* текста */
+
+.login-submit, .cc-submit {
+    width: 200px;
+    height: 35px;
+    background: #cad1dc;
+    font-size: 15px;
+    border: none;
+}
+
+/* Переходы с регистрации (дальше) */
+
+.address-link, .cc-link {
+    font-size: 14px;
+    background: #cad1dc;
+    width: 200px;
+    height: 35px;
+    margin: 0px 8px 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Пропажа элемента button при CSS */
+
+.reg-submit, .address-submit {
+    background: none;
+    outline: none;
+    border: none;
+}

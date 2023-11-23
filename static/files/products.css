@@ -1,0 +1,51 @@
+.block_container {
+    background-color: #ffcd4f;
+    width: 235px;
+    height: auto;
+    font-size: 16.5px;
+    font-family: 'Overpass';
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.products_name_border {
+    width: 200px;
+    height: auto;
+    margin: auto;
+}
+
+.clothes {
+    margin: 9px 25px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1.5px solid black;
+    width: 150px;
+}
+
+.clothes .clothes_tooltip_right {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 105%;
+}
+
+.clothes .clothes_tooltip_right::after {
+    content: " ";
+    position: absolute;
+    top: 48%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.clothes:hover .clothes_tooltip_right, .clothes:active .clothes_tooltip_right {
+    visibility: visible;
+}

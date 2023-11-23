@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'files/header.css' %}">
+    <link rel="stylesheet" href="{% static 'files/fontawesome/css/all.min.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Oswald:wght@300;400&family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <title>FRESHLOOK.kz</title>
+</head>
+<body>
+    <div class="topline">
+        <div class="topline_border">
+            <a class="press_a" href="{% url 'shop_view' %}">
+                <div class="topline_hover">Главная страница</div>
+            </a>
+            <a class="press_a" href="{% url 'products_view' %}">
+                <div class="topline_hover">Товары</div>
+            </a>
+            <div class="topline_hover">О нас</div>
+            <div class="topline_hover">Контакты</div>
+            <div class="search-box">
+                <input class="search-text" type="text" placeholder="Поиск...">
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            {% comment %} {% if user.is_authenticated %}
+                <button class="login-box">
+                    <i class="fa-regular fa-registered">
+                        <div class="loginfo_container">
+                            <div class="logininfo_border">
+                                <div class="loginfo">Пользователь: {{ form.username }}</div>
+                                <div class="log-out">Выйти</div>
+                            </div>
+                        </div>
+                    </i>
+                </button>
+            {% else %} {% endcomment %}
+                <a class="press_a" href="{% url 'login_view' %}">
+                    <button class="login-box">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </button>
+                </a>
+            {% comment %} {% endif %} {% endcomment %}
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

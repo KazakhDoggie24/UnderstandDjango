@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'files/products.css' %}">
+    </head>
+    <body>
+        <div class='block_container'>
+            <div class='products_name_border'>
+                <div class='clothes'>Вверхняя одежда
+                    <div class='clothes_tooltip_right'>
+                        <div class='tooltip_right_border'>
+                            <div class='clothes_name'>Футболки</div>
+                            <div class='clothes_name'>Куртки</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='clothes'>Нижняя одежда
+                    <div class='clothes_tooltip_right'>
+                        <div class='tooltip_right_border'>
+                            <div class='clothes_name'>Штаны</div>
+                            <div class='clothes_name'>Шорты</div>
+                        </div>
+                    </div>
+                </div>
+                <div class='clothes'>Обувь
+                    <div class='clothes_tooltip_right'>
+                        <div class='tooltip_right_border'>
+                            <div class='clothes_name'>Кроссовки</div>
+                            <div class='clothes_name'>Сапоги</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,56 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/products_view.css' %}">
+{% endblock %}
+
+    <div class="whole_container">
+        {% include "products_name.html" %}
+        <div class="content_container">
+            <div class="pic_container">
+                <div class="one_pic"></div>
+                <div class="two_pic"></div>
+                <div class="three_pic"></div>
+            </div>
+            <div class="info_container">
+                <div class="info1">
+                    <i class="fa-solid fa-truck"></i>
+                    <div class="text_info">
+                        <b>Быстрая доставка</b>
+                        <br></br>
+                        Кратчайшие сроки доставки
+                    </div>
+                </div>
+                <div class="info2">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="text_info">
+                        <b>Гибкая система скидок</b>
+                        <br></br>
+                        Для постоянных покупателей
+                    </div>
+                </div>
+                <div class="info3">
+                    <i class="fa-solid fa-info"></i>
+                    <div class="text_info">
+                        <b>Полезная консультация</b>
+                        <br></br>
+                        Выбор оптимальных решений
+                    </div>
+                </div>
+                <div class="info4">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <div class="text_info">
+                        <b>Качественный сервис</b>
+                        <br></br>
+                        Быстрая обработка заказа
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

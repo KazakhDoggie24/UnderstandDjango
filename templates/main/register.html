@@ -1,0 +1,43 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/main_char.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'files/register.css' %}">
+{% endblock %}
+
+    <div class="register-border">
+        <div class="register-container">
+            <div class="register-content">
+                <h2 class="reg-title">Регистрация</h2>
+                <div class="register-form">
+                    <form action="/register/" method="POST">
+                        {% csrf_token %}
+                        <div class="register-field">
+                            {{ form.username }}
+                        </div>
+                        <div class="register-field">
+                            {{ form.email }}
+                        </div>
+                        <div class="register-field">
+                            {{ form.password }}
+                        </div>
+                        <div class="register-field">
+                            {{ form.date_field }}
+                        </div>
+                        <div class="reg-button-container">
+                            <button class="reg-submit" type="submit">
+                                <a class="address-register" href="{% url 'address_view' %}">
+                                    <div class="address-link">Дальше...</div>
+                                </a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

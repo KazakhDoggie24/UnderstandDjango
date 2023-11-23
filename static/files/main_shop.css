@@ -1,0 +1,132 @@
+#shop_banner {
+    background: linear-gradient(177deg, rgba(234,174,238,1) 0%, rgba(250,239,171,1) 81%);
+    margin: auto;
+    width: 1250px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shopbanner-border {
+    width: 1100px;
+    height: 230px;
+}
+
+#shop-name {
+    font-family: "Hind";
+    font-size: 60px;
+    text-shadow: 2px 2px 0px black;
+    color: white;
+    width: 320px;
+    margin: 30px 20px;
+}
+
+#shopbanner-quote {
+    width: 550px;
+    margin: 40px 20px;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    color: white;
+}
+
+.background-container {
+    max-width: 1472px;
+    height: 400px;
+    margin: auto;
+    padding: 40px;
+    background-color: #ffd468;
+}
+
+/* Слайдшоу */
+
+.slideshow-container {
+    max-width: 1000px;
+    max-height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides > img {
+    width: 1000px;
+    height: 300px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

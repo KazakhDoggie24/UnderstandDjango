@@ -1,0 +1,39 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/main_char.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'files/login.css' %}">
+{% endblock %}
+
+    <div class="login-border">
+        <div class="login-container">
+            <div class="login-content">
+                <h2 class="login-title">Вход в систему</h2>
+                <div class="login-form">
+                    <form action="/login/" method="POST">
+                        <div class="login-field">
+                            {{ form.username }}
+                        </div>
+                        <div class="login-field">
+                            {{ form.password }}
+                        </div>
+                        {% csrf_token %}
+                        <div class="login-button-container">
+                            <button class="login-submit" type="submit">Войти</button>
+                        </div>
+                        <div class="forgot-signup-container">
+                            <div class="forgot-link">Забыли пароль</div>
+                            <a class="link-register" href="{% url 'register_view' %}">
+                                <div class="signup-link">Регистрация</div>
+                            </a>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

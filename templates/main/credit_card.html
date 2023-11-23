@@ -1,0 +1,51 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+{% load static %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/main_char.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'files/credit_card.css' %}">
+{% endblock %}
+
+    <div class="cc-border">
+        <div class="cc-container">
+            <div class="cc-content">
+                <h2 class="cc-title">Кредитная карта</h2>
+                <div class="card">
+                    <form action='/register/address/credit_card/' method='POST'>
+                        {% csrf_token %}
+                        <div class="cc-field">
+                            {{ form.card_owner }}
+                        </div>
+                        <div class="cc-field">
+                            {{ form.card_number }}
+                        </div>
+                        <div class="exp-date-name">Срок Годности</div>
+                        <div class="exp-date-image-container">
+                            <div class="exp-date-container">
+                                <div class="exp-date">
+                                    {{ form.expiration_month }}
+                                </div>
+                                <div class="exp-date">
+                                    {{ form.expiration_year }}
+                                </div>
+                            </div>
+                            <div class="cvv">
+                                {{ form.cvv }}
+                            </div>
+                            <div class="image-container">
+                                <img class="cc-image" src="https://apostlewear.com.au/wp-content/uploads/2022/10/mastercard.jpg">
+                                <img class="cc-image" src="https://www.colorline.by/image/cache/payment/visaa-4600x3000.jpg" alt="Visa Logo">
+                            </div>
+                        </div>
+                        <div class="reg-cc-container">
+                            <button class="cc-submit" type="submit">Войти</button>
+                        </div>
+                    </form>
+                </div>
+             </div>
+        </div>
+    </div>
+{% endblock %}
